@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ITC INVENTORY MANAGEMENT SYSTEM</h1>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2>Search Bins</h2>
+            <div class="search-form">
+                <div class="form-group">
+                    <label for="sku-select">Select SKU:</label>
+                    <select id="sku-select">
+                        <option value="">Loading SKUs...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="value-input">Minimum Value:</label>
+                    <input type="number" id="value-input" placeholder="Enter value" min="0">
+                </div>
+                <button id="search-btn" class="btn btn-primary">Search Bins</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="results-section" style="display: none;">
+            <h2>Available Bins</h2>
+            <div id="bins-container" class="bins-container"></div>
+        </section>
+
+        <!-- QR Code Modal -->
+        <div id="qr-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>QR Code for <span id="modal-bin-name"></span></h2>
+                <div class="qr-info">
+                    <p><strong>SKU:</strong> <span id="modal-sku"></span></p>
+                    <p><strong>Current Value:</strong> <span id="modal-current-value"></span></p>
+                    <p><strong>Subtract Value:</strong> <span id="modal-subtract-value"></span></p>
+                </div>
+                <div id="qr-code-container"></div>
+                <div class="modal-actions" id="scan-instructions">
+                    <p class="scan-note">📱 Scan this QR code with your phone to subtract the value</p>
+                    <p class="scan-note" style="margin-top: 10px; font-weight: 600; color: #667eea;">Waiting for scan...</p>
+                </div>
+                <div id="scan-result" class="scan-result"></div>
+                <div id="scan-success-actions" class="modal-actions" style="display: none;">
+                    <button id="return-home-btn" class="btn btn-success">Return to Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
