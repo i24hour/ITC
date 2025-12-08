@@ -1,7 +1,5 @@
 # 📦 SKU Inventory Management System
 
-🌐 **Live Application**: [https://itc-warehouse-app-2025-c8hgg5deeagae5dj.centralindia-01.azurewebsites.net](https://itc-warehouse-app-2025-c8hgg5deeagae5dj.centralindia-01.azurewebsites.net/index.html)
-
 A web-based inventory management system with QR code scanning functionality for managing SKU bin assignments.
 
 ## Features
@@ -122,5 +120,6 @@ The server will display your network URL for accessing from different devices.
 - Barcode scanning support
 - Transaction history log
 - Multiple warehouse support
+
 
 
